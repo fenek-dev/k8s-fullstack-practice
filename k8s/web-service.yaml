@@ -4,7 +4,9 @@ metadata:
   name: web-service
 spec:
   selector:
-    app.kubernetes.io/name: web
+    app: web
+  type: LoadBalancer
   ports:
-  - port: 80
+  - protocol: TCP
+    port: 80
     targetPort: 4173
