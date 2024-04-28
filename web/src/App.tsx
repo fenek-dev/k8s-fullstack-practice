@@ -9,9 +9,9 @@ function App() {
   const [result, setResult] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch("/fruits")
+    fetch("http://localhost:3000/fruits")
       .then((res) => res.json())
-      .then((res) => setResult(res));
+      .then((res) => setResult(res.items));
   }, []);
 
   return (
